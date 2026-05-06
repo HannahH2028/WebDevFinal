@@ -128,7 +128,7 @@ function App() {
           Land <span>10 heads in a row</span> to win — if you can.
         </p>
       </header>
-    
+
       {!started && (
         <div className="start-screen">
           <div className="start-coin-icon">🪙</div>
@@ -159,7 +159,7 @@ function App() {
         </div>
       )}
 
-      
+
       {started && game && (
         <main className="app-main">
           <aside className="app-sidebar-left">
