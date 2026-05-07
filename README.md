@@ -9,10 +9,10 @@ First, make sure to install mongodb, npm, node, and other necessities. I include
 brew services start mongodb/brew/mongodb-community
 
 # Terminal 2: Start Express server
-cd server && npm run dev
+cd server && npm install && npm run dev
 
 # Terminal 3: Start React client
-cd client && npm run dev
+cd client && npm install && npm run dev
 
 # Open http://localhost:5173 in your browser
 ```
