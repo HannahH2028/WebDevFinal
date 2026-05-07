@@ -1,0 +1,177 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.app-header {
+  text-align: center;
+  padding: var(--space-2xl) var(--space-xl) var(--space-lg);
+  position: relative;
+}
+.app-title {
+  font-size: var(--font-5xl);
+  font-weight: 900;
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  margin-bottom: var(--space-sm);
+}
+.app-subtitle {
+  font-size: var(--font-lg);
+  color: var(--text-secondary);
+  font-weight: 400;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.app-subtitle span {
+  color: var(--gold-400);
+  font-weight: 600;
+}
+.app-main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 280px 1fr 300px;
+  gap: var(--space-xl);
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--space-xl) var(--space-2xl);
+  animation: fadeIn 0.5s ease-out;
+}
+.app-sidebar-left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+.app-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xl);
+}
+.app-sidebar-right {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+.app-stats {
+  width: 100%;
+  max-width: 600px;
+}
+.start-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  animation: fadeInUp 0.6s ease-out;
+  text-align: center;
+  padding: var(--space-xl);
+}
+.start-coin-icon {
+  font-size: 6rem;
+  margin-bottom: var(--space-xl);
+  animation: float 3s ease-in-out infinite;
+}
+.start-title {
+  font-size: var(--font-4xl);
+  font-weight: 900;
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--space-md);
+}
+.start-desc {
+  font-size: var(--font-lg);
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin-bottom: var(--space-sm);
+  line-height: 1.7;
+}
+.start-odds {
+  font-size: var(--font-sm);
+  color: var(--text-muted);
+  margin-bottom: var(--space-2xl);
+}
+.start-odds span {
+  color: var(--red-400);
+  font-weight: 600;
+}
+.start-name-input {
+  width: 280px;
+  padding: var(--space-md) var(--space-lg);
+  font-family: var(--font-family);
+  font-size: var(--font-base);
+  color: var(--text-primary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  outline: none;
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  transition: border-color var(--transition-base);
+}
+.start-name-input:focus {
+  border-color: var(--gold-500);
+}
+.start-btn {
+  padding: var(--space-md) var(--space-3xl);
+  font-family: var(--font-family);
+  font-size: var(--font-xl);
+  font-weight: 800;
+  color: #1a1a2e;
+  background: var(--gradient-gold);
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  box-shadow: var(--shadow-md), 0 0 25px rgba(255, 193, 7, 0.2);
+  transition: all var(--transition-base);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.start-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: var(--shadow-lg), 0 0 40px rgba(255, 193, 7, 0.35);
+}
+.start-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-size: var(--font-lg);
+  color: var(--text-secondary);
+}
+.error-toast {
+  position: fixed;
+  bottom: var(--space-xl);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: var(--space-md) var(--space-xl);
+  background: rgba(244, 67, 54, 0.9);
+  color: white;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  z-index: 999;
+  animation: fadeInUp 0.3s ease-out;
+  backdrop-filter: blur(8px);
+}
+@media (max-width: 960px) {
+  .app-main {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+  .app-sidebar-left,
+  .app-sidebar-right {
+    order: 2;
+  }
+  .app-center {
+    order: 1;
+  }
+}

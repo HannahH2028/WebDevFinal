@@ -1,0 +1,74 @@
+.game-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--space-md);
+}
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  text-align: center;
+  backdrop-filter: blur(8px);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-gold);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+.stat-card:hover {
+  background: var(--bg-card-hover);
+  transform: translateY(-2px);
+  border-color: var(--border-gold);
+}
+.stat-card:hover::before {
+  opacity: 1;
+}
+.stat-card.highlight {
+  border-color: var(--border-gold);
+  box-shadow: var(--shadow-gold);
+}
+.stat-icon {
+  font-size: var(--font-2xl);
+  margin-bottom: var(--space-xs);
+}
+.stat-label {
+  font-size: var(--font-xs);
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: var(--space-xs);
+}
+.stat-value {
+  font-size: var(--font-2xl);
+  font-weight: 800;
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+}
+.stat-value.money {
+  color: var(--gold-400);
+}
+.stat-value.streak {
+  color: var(--gold-300);
+}
+.stat-value.streak.on-fire {
+  animation: streak-fire 1s ease-in-out infinite;
+}
+.stat-value.chance {
+  color: var(--green-400);
+}
+.stat-subtext {
+  font-size: var(--font-xs);
+  color: var(--text-muted);
+  margin-top: 2px;
+}

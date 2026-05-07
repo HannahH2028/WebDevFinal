@@ -1,0 +1,111 @@
+.upgrade-shop {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  backdrop-filter: blur(10px);
+}
+.upgrade-shop-title {
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.upgrade-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+.upgrade-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  background: var(--bg-glass);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-base);
+}
+.upgrade-card:hover:not(.maxed) {
+  background: var(--bg-card-hover);
+  border-color: var(--border-gold);
+  transform: translateX(4px);
+}
+.upgrade-card.maxed { opacity: 0.5; }
+.upgrade-icon {
+  font-size: var(--font-2xl);
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-card);
+  border-radius: var(--radius-sm);
+}
+.upgrade-info { flex: 1; min-width: 0; }
+.upgrade-name {
+  font-size: var(--font-base);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.upgrade-desc {
+  font-size: var(--font-xs);
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+.upgrade-level-bar {
+  display: flex;
+  gap: 3px;
+  margin-top: var(--space-xs);
+}
+.upgrade-level-pip {
+  width: 16px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+}
+.upgrade-level-pip.filled {
+  background: var(--gradient-gold);
+  border-color: var(--gold-600);
+}
+
+.upgrade-buy-btn {
+  flex-shrink: 0;
+  padding: var(--space-sm) var(--space-lg);
+  font-family: var(--font-family);
+  font-size: var(--font-sm);
+  font-weight: 700;
+  color: #1a1a2e;
+  background: var(--gradient-gold);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+.upgrade-buy-btn:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 193, 7, 0.3);
+}
+.upgrade-buy-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  filter: grayscale(0.5);
+}
+.upgrade-buy-btn.maxed-btn {
+  background: var(--bg-card);
+  color: var(--text-muted);
+  border: 1px solid var(--border-subtle);
+}
+.upgrade-cost {
+  font-size: var(--font-xs);
+  text-align: center;
+  margin-top: 2px;
+}
+.upgrade-cost.affordable { color: var(--green-400); }
+.upgrade-cost.expensive { color: var(--red-400); }

@@ -1,0 +1,91 @@
+.flip-history {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  backdrop-filter: blur(10px);
+  max-height: 320px;
+  display: flex;
+  flex-direction: column;
+}
+.flip-history-title {
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.flip-history-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding-right: var(--space-xs);
+}
+.flip-history-empty {
+  color: var(--text-muted);
+  font-size: var(--font-sm);
+  text-align: center;
+  padding: var(--space-xl);
+  font-style: italic;
+}
+.flip-entry {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  background: var(--bg-glass);
+  border: 1px solid transparent;
+  animation: slideInRight var(--transition-fast) ease-out;
+  font-size: var(--font-sm);
+}
+.flip-entry.heads {
+  border-color: rgba(255, 193, 7, 0.15);
+}
+.flip-entry.tails {
+  border-color: rgba(244, 67, 54, 0.1);
+}
+.flip-entry-result {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+.flip-entry-result .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.flip-entry.heads .dot {
+  background: var(--gold-400);
+  box-shadow: 0 0 6px rgba(255, 193, 7, 0.5);
+}
+.flip-entry.tails .dot {
+  background: var(--red-400);
+  box-shadow: 0 0 6px rgba(244, 67, 54, 0.3);
+}
+.flip-entry.heads .flip-entry-result {
+  color: var(--gold-400);
+}
+.flip-entry.tails .flip-entry-result {
+  color: var(--red-400);
+}
+.flip-entry-money {
+  color: var(--text-muted);
+  font-size: var(--font-xs);
+  font-weight: 500;
+}
+.flip-entry.heads .flip-entry-money {
+  color: var(--gold-300);
+}
+.flip-entry-number {
+  color: var(--text-muted);
+  font-size: var(--font-xs);
+  min-width: 30px;
+  text-align: right;
+}
