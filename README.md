@@ -28,4 +28,4 @@ Hannah Huang: Database and models with MongoDB and Mongoose
 
 Josh Goestenkors: Frontend architecture with React hooks
 
-Mason Burris: UI and React styling with CSS
+Mason Burris: UI and front end styling with CSS
