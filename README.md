@@ -16,3 +16,12 @@ cd client && npm install && npm run dev
 
 # Open http://localhost:5173 in your browser
 ```
+## Documentation
+
+Link to video presentation: https://youtu.be/s8VEyhr2kio (if it doesn't work, email hdhcg4@umsystem.edu for an mp4)
+
+Team:
+Shane McKelvey: Backend architecture with Express and Node.js
+Hannah Huang: Database and models with MongoDB and Mongoose
+Josh Goestenkors: Frontend architecture with React hooks
+Mason Burris: UI and React styling with CSS
